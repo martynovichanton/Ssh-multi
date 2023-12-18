@@ -1,0 +1,10 @@
+modify cli preference pager disabled display-threshold 0
+cd /Common
+list
+cd /Partition01
+list
+cd /Partition02
+list
+cd /Partition03
+list
+modify cli preference pager enabled display-threshold 100
