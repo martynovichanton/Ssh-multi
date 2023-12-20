@@ -3,7 +3,7 @@
 ## Execute multiple SSH commands on multiple devices
 
 ## Running the commands
-ssh_multi.py FOLDER_NAME
+python ssh_multi.py FOLDER_NAME
 
 ## Features
 1. Run multiple commands on multiple devices and stay within the context of the previous commands
