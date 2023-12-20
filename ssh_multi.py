@@ -136,14 +136,14 @@ class Ssh():
         fileName = device + "_" + time + ".conf"
         out = self.runCommand("config global" + "\n")
         self.printOutput(out, logFile)
-        out = self.runCommand(f"execute backup config ftp SSHMulti/{destinationDir}/{fileName} 10.10.10.1 ftp_user XXXXX" + "\n")
+        out = self.runCommand(f"execute backup config ftp Ssh_multi/{destinationDir}/{fileName} 10.10.10.1 ftp_user XXXXX" + "\n")
         self.printOutput(out, logFile)
         out = self.runCommand("end" + "\n")
         self.printOutput(out, logFile)
 
     def exportFortimgmtConfig(self, device, destinationDir, logFile, time):
         fileName = device + "_" + time + ".dat"
-        out = self.runCommand(f"execute backup all-settings ftp 10.10.10.1:21 SSHMulti/{destinationDir}/{fileName} ftp_user XXXXX" + "\n")
+        out = self.runCommand(f"execute backup all-settings ftp 10.10.10.1:21 Ssh_multi/{destinationDir}/{fileName} ftp_user XXXXX" + "\n")
         self.printOutput(out, logFile)
 
 
