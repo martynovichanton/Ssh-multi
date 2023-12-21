@@ -13,5 +13,6 @@ python ssh_multi.py FOLDER_NAME
 5. General log to track the process
 6. Support for multithreading per set directory
 7. Support for executing backup commands as needed per device type
-
+8. Can be easily extended to use with other devices
+9. Playing with in memory encryption of username and password
 
