@@ -219,7 +219,7 @@ class Ssh():
         if BACKUP_CONFIG: zip_password = mainCrypto.encrypt_random_key(getpass("Enter zip password"))
 
         now = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        outputDir = "output" + "-" + now
+        outputDir = f"output/output-{now}"
         if not os.path.exists(f"{mainDir}/{outputDir}"):
             os.mkdir(f"{mainDir}/{outputDir}")
 
