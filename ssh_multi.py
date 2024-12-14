@@ -83,7 +83,7 @@ class Ssh():
         self.client = paramiko.SSHClient()
         self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         self.client.connect(self.ip, self.port, self.crypto.decrypt_random_key(self.user), self.crypto.decrypt_random_key(self.password))
-        self.shell = self.client.invoke_shell()
+        self.shell = self.client.invoke_shell(height=100, width=100)
 
     def printOutput(self, out, file):
         for line in out.splitlines():
