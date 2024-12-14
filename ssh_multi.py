@@ -117,7 +117,7 @@ class Ssh():
         self.printOutput(out, logFile)
         out = self.runCommand(f"md5sum /var/local/ucs/{fileName}" + "\n")
         self.printOutput(out, logFile)
-        original_hash = out.splitlines()[2].split(" ")[0]
+        original_hash = out.splitlines()[1].split(" ")[0]
         downloaded_hash = hashlib.md5(open(f"{destinationDir}/{fileName}",'rb').read()).hexdigest()
         print(f"[*] original hash:{original_hash}")
         print(f"[*] downloaded hash:{downloaded_hash}")
